@@ -43,6 +43,10 @@ RUN export LC_ALL=en_US.UTF-8
 RUN export LANG=en_US.UTF-8
 RUN locale-gen en_US.UTF-8
 
+RUN mkdir /opt/conda/bin/indexes
+
+ADD Rfam_index*ebwt /opt/conda/bin/indexes/
+
 RUN mkdir /work-dir
 
 WORKDIR /work-dir
